@@ -1,0 +1,7 @@
+{
+  "name": "tributetosupdup",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

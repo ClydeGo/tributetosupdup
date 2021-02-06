@@ -1,0 +1,31 @@
+.bloodItem {
+    font-size: 30px;
+    --min-height: 100px;
+}
+
+.bloodList {
+    overflow: scroll;
+}
+
+.footer {
+    display: flex;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+}
+
+h1 {
+    text-align: center;
+    font-size: 50px;
+}
+
+.summary {
+    font-size: 40px;
+}
+
+ion-item {
+    --border-width: 1px 1px 1px 1px;
+    --inner-box-shadow: 0px;
+    --inner-border-width: 0px;
+    --padding-bottom: 3px;
+}

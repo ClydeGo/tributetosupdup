@@ -1,0 +1,15 @@
+<ion-footer class="ion-no-border" [hidden]="keyboardShown">
+
+  <div class="button-actions">
+    <button class="mat-raised-button" (click)="openSummary()">summary</button>
+
+    <button class="mat-raised-button" *ngIf="showChartButton"
+      (click)="openChart()">chart</button>
+
+    <button class="mat-raised-button" 
+      (click)="cancel()" >cancel</button>
+
+    <button class="mat-raised-button mat-primary" [disabled]="!page.isSaveEnabled()"
+      (click)="save()">save</button> 
+  </div>
+</ion-footer>

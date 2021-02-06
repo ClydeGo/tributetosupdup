@@ -1,0 +1,19 @@
+
+<ion-content>
+  <h1>Blood Admin</h1>
+  <div class = "bloodList">
+    <ion-list *ngIf = "data" class = "bloodList">
+      <ion-item *ngFor = "let dat of data" button (click) = "openBlood(dat)" class = "bloodItem">
+        <div>
+          <span>{{ dat.prescriptionTime }} </span> <span>{{ dat.professionalName }}</span> : <span>{{ dat.bloodProduct }}</span>
+          <span *ngIf = "dat.numberOfUnits">{{ dat.numberOfUnits }}</span> <span *ngIf = "dat.comment">, {{ dat.comment}}</span></div>
+      </ion-item>
+    </ion-list>
+  </div>
+</ion-content>
+
+<ion-footer>
+    <ion-button (click) = "openSummary()" color="light" expand = "full" class = "summary">
+      Summary
+    </ion-button>
+</ion-footer>

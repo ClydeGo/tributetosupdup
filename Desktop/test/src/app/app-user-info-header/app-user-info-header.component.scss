@@ -1,0 +1,73 @@
+
+    .patientLastName{
+        font-family: 'open_sansbold';
+        font-weight: 800;
+        font-size: 75%;
+    }
+    .patientFirstName{
+        font-family: 'open_sansregular';
+        font-weight: 400;
+        font-size: 75%;
+    }
+    .displayflex{
+        display: flex;
+        float: right;
+    }
+
+    .patientFirstName:first-child  {
+        text-transform:capitalize;
+    }
+
+    .patientLastName:first-child  {
+        text-transform:capitalize;
+    }
+
+    .patientroundimage {
+        margin: 0 0 0 0 !important;
+        color: white;
+        min-height: 24px;
+        max-height: 24px;
+        min-width: 24px;
+        max-width: 24px;
+        top: 0px !important;
+        left: 0px !important;
+    }
+    .patientMotherAvatar {
+        //content: url(../../../assets/icon/mother_menu_icon.png);
+        width: 45px !important;
+        height: 45px !important;
+        background-size: cover;
+        background-color: transparent;
+        /* -webkit-box-shadow: none !important; */
+        /* box-shadow: none !important; */
+        /* background-size: 100% 50px; */
+    
+    }
+
+    .patientChildAvatar  {
+        // content: url(../../../assets/icon/child_menu_icon.png) ;
+        // margin-right: -20px;
+        // margin-left: 10px;
+        width: 45px !important;
+        height: 45px !important;
+        background-size: cover;
+        background-color: transparent;
+        /* -webkit-box-shadow: none !important; */
+        /* box-shadow: none !important; */
+        /* background-size: 100% 50px; */
+    }
+    .mat-fab.mat-accent, .mat-mini-fab.mat-accent {
+        background-color:  #fff;
+    }
+    .textcolorwhite{
+        color: white;
+    }
+    .borderleftwhite{
+        border-left: solid 1px white;
+    }
+    .patientidlabel {
+        font-size: 12px;
+        font-family: 'open_sansregular';
+        padding-top: 12px;
+    }
+

@@ -1,0 +1,25 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      Tab Two
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-item>
+    <ion-label>Date</ion-label>
+    <ion-datetime (ionChange) = "getDate()" displayFormat="MM/DD/YYYY"  [(ngModel)] = "myTime"></ion-datetime>
+  </ion-item>
+  <ion-item>
+    <ion-label>Time</ion-label> 
+    <ion-datetime displayFormat="HH:mm" (ionChange) = "getTime()" [(ngModel)] = "myTime"></ion-datetime>
+  </ion-item>
+
+  <ion-item>
+    <ion-label>fields['indwellingCatheterRemovalTime'].placeholder | translate</ion-label>
+    <ion-datetime displayFormat="DD MMM YYYY H:mm" [min] = "myTime"></ion-datetime>
+  </ion-item>
+
+  <!-- <h1 [hidden]="!myTime">result is {{myDate}} : {{myTime}} </h1> -->
+</ion-content>

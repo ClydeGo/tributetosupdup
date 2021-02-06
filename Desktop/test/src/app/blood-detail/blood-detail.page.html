@@ -1,0 +1,10 @@
+<ion-header class="ion-no-border">
+  <user-info-header [toolbarbackground]="'#0099d3'"></user-info-header>
+</ion-header>
+
+<ion-content>
+  <div class="page-title2">
+    <span>{{ data.prescription.prescriptionTime }} </span> <span>{{ data.prescription.professionalName }}</span> : <span>{{ data.prescription.bloodProduct }}</span>
+    <span *ngIf = "data.prescription.numberOfUnits">{{ data.prescription.numberOfUnits }}</span> <span *ngIf = "data.prescription.comment">, {{ data.prescription.comment}}</span>
+  </div>
+</ion-content>
