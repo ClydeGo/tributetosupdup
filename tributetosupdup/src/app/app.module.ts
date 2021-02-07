@@ -6,15 +6,15 @@ import { IonicModule, IonicRouteStrategy } from '@ionic/angular';
 
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
-import { MainHeaderComponent } from './components/main-header/main-header.component';
+import { SideMenuComponent } from './components/side-menu/side-menu.component';
 
 @NgModule({
-  declarations: [AppComponent, MainHeaderComponent],
+  declarations: [AppComponent, SideMenuComponent],
   entryComponents: [],
   imports: [
     BrowserModule, IonicModule.forRoot(), AppRoutingModule,
   ],
   providers: [{ provide: RouteReuseStrategy, useClass: IonicRouteStrategy }],
-  bootstrap: [AppComponent, MainHeaderComponent],
+  bootstrap: [AppComponent],
 })
 export class AppModule {}
