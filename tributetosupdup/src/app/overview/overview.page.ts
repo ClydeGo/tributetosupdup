@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { MenuController } from '@ionic/angular';
+import { stockData } from '../models/stockData';
+import { GetStocksDataService } from '../services/get-stocks-data.service';
 
 @Component({
   selector: 'app-overview',
@@ -8,8 +10,13 @@ import { MenuController } from '@ionic/angular';
 })
 export class OverviewPage implements OnInit {
 
-  constructor(private menu: MenuController) {
+  constructor(
+    private menu: MenuController,
+    private getStocks: GetStocksDataService
+    ) {
   }
+
+  data: stockData[];
 
   ngOnInit() {
     this.menu.close();
@@ -17,6 +24,10 @@ export class OverviewPage implements OnInit {
 
   ionViewWillEnter() {
     this.menu.close();
+    this.getStocks.getStocksData().subscribe(stocks => {
+      this.data = stocks;
+      console.log(this.data);
+    });
   }
 
 }
