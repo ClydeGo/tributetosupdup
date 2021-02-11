@@ -1,4 +1,23 @@
 <app-main-header></app-main-header>
 <ion-content>
-
+    <div class = "center">
+        <h1>Stock Overview</h1>
+        <table class="stock-table">
+          <tr>
+            <th>Symbol</th>
+            <th>Company</th>
+            <th>Mkt. Cap</th>
+            <th>Price</th>
+            <th>Last Tweeted</th>
+          </tr>
+          
+          <tr *ngFor = "let stock of data" (click) = "openSelectedStock(stock)">
+            <td data-th = "Symbol">{{ stock.symbol }}</td>
+            <td data-th = "Company">{{ stock.company }}</td>
+            <td data-th = "Mkt. Cap">{{ stock.marketCap }}</td>
+            <td data-th = "Price">{{ stock.price }}</td>
+            <td data-th = "Last tweet">{{ stock.lastTweeted }}</td>
+          </tr>
+        </table>
+    </div>
 </ion-content>

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-selected-stock',
@@ -7,7 +8,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SelectedStockPage implements OnInit {
 
-  constructor() { }
+  constructor(
+    private router: Router,
+    private route: ActivatedRoute
+  ) { 
+    console.log(this.router.getCurrentNavigation().extras.state);
+  }
 
   ngOnInit() {
   }
