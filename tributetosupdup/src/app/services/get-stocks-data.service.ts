@@ -19,6 +19,7 @@ export class GetStocksDataService {
       symbol: 'TSLA',
       company: 'Tesla Inc',
       marketCap: '807.83B',
+      price: '800',
       lastTweeted: '02/17/2009',
     },
     {
@@ -26,6 +27,7 @@ export class GetStocksDataService {
       symbol: 'NIO',
       company: 'NIO',
       marketCap: '89.13B',
+      price: '62',
       lastTweeted: '05/27/2015',
     },
     {
@@ -33,6 +35,7 @@ export class GetStocksDataService {
       symbol: 'LMND',
       company: 'Lemonade Inc',
       marketCap: '8.70B',
+      price: '140',
       lastTweeted: '01/17/2021',
     },
     {
@@ -40,6 +43,7 @@ export class GetStocksDataService {
       symbol: 'SQ',
       company: 'Square Inc',
       marketCap: '519.43',
+      price: '300',
       lastTweeted: '02/17/2020',
     }
   ];

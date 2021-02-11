@@ -3,6 +3,7 @@ export interface IstockData {
     symbol: string,
     company: string,
     marketCap: string,
+    price: string,
     lastTweeted: string
 }
 
@@ -11,5 +12,6 @@ export class stockData implements IstockData {
     symbol = '';
     company = '';
     marketCap = '';
+    price = '';
     lastTweeted = '';
 }

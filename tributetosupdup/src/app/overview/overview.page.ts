@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { MenuController } from '@ionic/angular';
 import { stockData } from '../models/stockData';
 import { GetStocksDataService } from '../services/get-stocks-data.service';
@@ -12,7 +13,8 @@ export class OverviewPage implements OnInit {
 
   constructor(
     private menu: MenuController,
-    private getStocks: GetStocksDataService
+    private getStocks: GetStocksDataService,
+    private router: Router
     ) {
   }
 
@@ -26,8 +28,12 @@ export class OverviewPage implements OnInit {
     this.menu.close();
     this.getStocks.getStocksData().subscribe(stocks => {
       this.data = stocks;
-      console.log(this.data);
+      console.log(this.data); 
     });
+  }
+
+  openSelectedStock(stock){
+    this.router.navigate(['stock'], {state: stock});
   }
 
 }

@@ -12,7 +12,7 @@ const routes: Routes = [
     pathMatch: 'full'
   },
   {
-    path: 'stock/:stockID',
+    path: 'stock',
     loadChildren: () => import('./selected-stock/selected-stock.module').then( m => m.SelectedStockPageModule)
   },
   {
