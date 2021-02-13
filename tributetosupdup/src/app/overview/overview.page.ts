@@ -28,7 +28,6 @@ export class OverviewPage implements OnInit {
     this.menu.close();
     this.getStocks.getStocksData().subscribe(stocks => {
       this.data = stocks;
-      console.log(this.data); 
     });
   }
 
