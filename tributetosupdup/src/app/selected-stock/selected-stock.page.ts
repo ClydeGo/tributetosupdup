@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
+import { GetStocksDataService } from '../services/get-stocks-data.service';
 
 @Component({
   selector: 'app-selected-stock',
@@ -8,14 +9,20 @@ import { ActivatedRoute, Router } from '@angular/router';
 })
 export class SelectedStockPage implements OnInit {
 
+  stockID: string;
+
   constructor(
     private router: Router,
-    private route: ActivatedRoute
+    private route: ActivatedRoute,
+    private getStocks: GetStocksDataService
   ) { 
-    console.log(this.router.getCurrentNavigation().extras.state);
+    this.stockID = this.router.getCurrentNavigation().extras.state.id;
   }
 
   ngOnInit() {
+    this.getStocks.getStockData(this.stockID).subscribe(stock => {
+      console.log(stock);
+    });
   }
 
 }
